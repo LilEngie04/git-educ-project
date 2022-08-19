@@ -1,0 +1,292 @@
+*{
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    min-width: 660px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #689cd2;
+    color: #fff;
+    font-family: Calibri;
+    text-decoration: none;
+}
+.header-section{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.header-item{
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-left: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.header-item:hover{
+    background-color: #ff9900;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+.header-logo{
+    font-weight: bold;
+    color: white;
+}
+.header-button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.math{
+    position: absolute;
+    left: 45%;
+}
+.slider{
+    max-width: 90%;
+    position: relative;
+
+    height: 300px;
+    /*margin-bottom: 130px;*/
+    margin: auto;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Кружочки */
+
+.slider-dots {
+    text-align: center;
+
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.list_rectangle,
+.list_rectangle2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.list_rectangle>li,
+.list_rectangle2>li {
+    position: relative;
+    display: block;
+    margin-bottom: .25rem;
+    padding: .325rem .825rem .325rem 1.325rem;
+    color: #fff;
+}
+
+.list_rectangle>li::before,
+.list_rectangle2>li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.5rem;
+}
+
+.list_rectangle>li {
+    margin-left: 0px;
+    background: #1a225f;
+}
+
+.list_rectangle2>li {
+    margin-left: 10px;
+    background: #2a3472;
+}
+
+.list_rectangle>li::before {
+    background: #2d3680;
+}
+
+.list_rectangle2>li::before {
+    background: #3c447a;
+}
+
+.list-counter-circle {
+    list-style: none;
+    counter-reset: list;
+    margin: 0;
+    padding: 0;
+}
+
+.list-counter-circle>li {
+    position: relative;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    margin-left: 1.75rem;
+    margin-bottom: .25rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    margin: .7rem;
+    color: #fff;
+    background: #1a225f;
+    white-space: nowrap;
+    border-radius: .25rem
+}
+
+.list-counter-circle>li::before {
+    content: counter(list);
+    counter-increment: list;
+    position: absolute;
+    left: -2rem;
+    top: -.25rem;
+    bottom: -.25rem;
+    width: 2.5rem;
+    line-height: 2rem;
+    border-radius: 1.25rem;
+    border: .10rem solid #fff;
+    text-align: center;
+    color: #fff;
+    background: #3c447a;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    color: #e7dada;
+}
+
+th,
+td:first-child {
+    background: #1a225f;
+    padding: 10px 20px;
+}
+
+th,
+td {
+    border-style: solid;
+    border-color: black;
+}
+
+td {
+    background: #3c447a;
+}
+
+/*Registratio page*/
+
+form p {
+    margin: 5px;
+    text-align: center;
+}
+
+form {
+    display: block;
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form input,
+form textarea,
+form select {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px;
+    font-family: inherit;
+    font-size: 12pt;
+    line-height: 1px;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+form textarea {
+    height: 7rem;
+}
+
+form select {
+    color: black;
+    border-radius: 5px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: max-content;
+}
+
+form input[type="button"] {
+    width: max-content;
+    color: black;
+}
